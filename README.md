@@ -3,18 +3,18 @@ generate a c/c++ code snippet for desired no. of processes to create using fork(
 test by placing fork-logic output inside test.c<br>
 eg.<br>
 ```
-$ ./fork-logic 99<br>
-pid_t p;<br>
-if((p=fork())==0){<br>
-    fork();<br>
-    if((p=fork())==0){<br>
-        fork();<br>
-        fork();<br>
-        fork();<br>
-        fork();<br>
-        if((p=fork())==0){<br>
-            fork();<br>
-        }<br>
-    }<br>
-}<br>
+$ ./fork-logic 99
+pid_t p;
+if((p=fork())==0){
+    fork();
+    if((p=fork())==0){
+        fork();
+        fork();
+        fork();
+        fork();
+        if((p=fork())==0){
+            fork();
+        }
+    }
+}
 ```
